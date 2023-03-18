@@ -1,0 +1,103 @@
+$ tail -n 2 .git/config
+[pull]
+	rebase = true
+$ vi README.md 
+$ git diff README.md
+diff --git a/README.md b/README.md
+index e84ddb2..995cc0d 100644
+--- a/README.md
++++ b/README.md
+@@ -1,2 +1,4 @@
+ # ommnrvp-tmp
+-Тестовый репозиторий ОММнРВП-2023
++Тестовый репозиторий ОММнРВП 2023 года
++
++Добро пожаловать!
+$ git add README.md 
+$ git commit -m 'welcome'
+[main 7b5336d] welcome
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+$ git push
+To github.com:grayed/ommnrvp-tmp.git
+ ! [rejected]        main -> main (fetch first)
+error: не удалось отправить некоторые ссылки в «git@github.com:grayed/ommnrvp-tmp.git»
+подсказка: Обновления были отклонены, так как внешний репозиторий содержит
+подсказка: изменения, которых у вас нет в вашем локальном репозитории.
+подсказка: Обычно, это связанно с тем, что кто-то уже отправил изменения в 
+подсказка: то же место. Перед повторной отправкой ваших изменений, вам нужно
+подсказка: забрать и слить изменения из внешнего репозитория себе
+подсказка: (например, с помощью «git pull …»).
+подсказка: Для дополнительной информации, смотрите «Note about fast-forwards»
+подсказка: в «git push --help».
+$ git pull
+remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+Распаковка объектов: 100% (3/3), 772 байта | 772.00 КиБ/с, готово.
+Из github.com:grayed/ommnrvp-tmp
+   6c9a17f..d6286af  main       -> origin/main
+First, rewinding head to replay your work on top of it...
+Применение: welcome
+Использую индекс для реконструкции базового дерева…
+M	README.md
+Откат к применению изменений к базовому коммиту с помощью трехходового слияния…
+Автослияние README.md
+КОНФЛИКТ (содержимое): Конфликт слияния в README.md
+error: Не удалось слить изменения.
+Ошибка применения изменений на 0001 welcome
+подсказка: Use 'git am --show-current-patch' to see the failed patch
+Resolve all conflicts manually, mark them as resolved with
+"git add/rm <conflicted_files>", then run "git rebase --continue".
+You can instead skip this commit: run "git rebase --skip".
+To abort and get back to the state before "git rebase", run "git rebase --abort".
+$ cat README.md 
+# ommnrvp-tmp
+<<<<<<< HEAD
+Тестовый репозиторий ОММнРВП-2023
+
+Для доступа обращайтесь к преподавателю.
+=======
+Тестовый репозиторий ОММнРВП 2023 года
+
+Добро пожаловать!
+>>>>>>> welcome
+$ vi README.md 
+$ git add README.md 
+$ git rebase --continue
+Применение: welcome
+$ git log
+commit b8f549bb4c5d45c4e8011777002025d0962887b0 (HEAD -> main)
+Author: Vadim Zhukov <persgray@gmail.com>
+Date:   Sat Mar 18 11:25:27 2023 +0300
+
+    welcome
+
+commit d6286af87e92ea2c2e5c0c3bd2f8dd2cfc26007d (origin/main, origin/HEAD)
+Author: Vadim Zhukov <persgray@gmail.com>
+Date:   Sat Mar 18 11:24:23 2023 +0300
+
+    add note regarging gaining access to this repo
+
+commit 6c9a17f9856ec793ef293cc4a00350adde0b4f7b
+Author: Vadim Zhukov <persgray@gmail.com>
+Date:   Sat Mar 18 11:18:43 2023 +0300
+
+    beautify Makefile a bit
+
+commit ea634c413dc5ee23f2549a99afd463419ddb5ac5
+Merge: 7dc0b4c 9ff3be9
+Author: Nikolay Dudko <49515422+niga337@users.noreply.github.com>
+Date:   Sat Mar 18 11:12:12 2023 +0300
+
+    Merge pull request #1 from grayed/tnt
+$ git push
+Перечисление объектов: 5, готово.
+Подсчет объектов: 100% (5/5), готово.
+При сжатии изменений используется до 6 потоков
+Сжатие объектов: 100% (3/3), готово.
+Запись объектов: 100% (3/3), 341 байт | 341.00 КиБ/с, готово.
+Всего 3 (изменения 2), повторно использовано 0 (изменения 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To github.com:grayed/ommnrvp-tmp.git
+   d6286af..b8f549b  main -> main
