@@ -1,6 +1,7 @@
 #include <stdio.h>
 
 int main() {
-	printf("UwU %n");
+	printf("UwU OwO %n");
 	return 0;
 }
+
