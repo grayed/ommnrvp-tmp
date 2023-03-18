@@ -1,6 +1,6 @@
 #include <stdio.h>
 
 int main() {
-	printf(":) %n");
+	printf("UwU %n");
 	return 0;
 }
