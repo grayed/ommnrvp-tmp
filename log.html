@@ -92,7 +92,435 @@ aaaa bbbb
 Изменения, которые будут включены в коммит:
   (используйте «git restore --staged &lt;файл&gt;…», чтобы убрать из индекса)
 	изменено:      121212
+<font color="#4E9A06"><b>user@user-RAY-S122-Mi</b></font>:<font color="#3465A4"><b>~/om</b></font>$ git commit
 
-</pre>    
+*** Пожалуйста, скажите мне кто вы есть.
+
+Запустите
+
+  git config --global user.email &quot;you@example.com&quot;
+  git config --global user.name &quot;Ваше Имя&quot;
+
+для указания идентификационных данных аккаунта по умолчанию.
+Пропустите параметр --global для указания данных только для этого репозитория.
+
+fatal: не удалось выполнить автоопределение адреса электронной почты (получено «user@user-RAY-S122-Mi.(none)»)
+<font color="#4E9A06"><b>user@user-RAY-S122-Mi</b></font>:<font color="#3465A4"><b>~/om</b></font>$ git config user.name &quot;Vadim Zhukov&quot;
+<font color="#4E9A06"><b>user@user-RAY-S122-Mi</b></font>:<font color="#3465A4"><b>~/om</b></font>$ git config user.email &quot;persgray@gmail.com&quot;
+<font color="#4E9A06"><b>user@user-RAY-S122-Mi</b></font>:<font color="#3465A4"><b>~/om</b></font>$ cat .git/config
+[core]
+	repositoryformatversion = 0
+	filemode = true
+	bare = false
+	logallrefupdates = true
+[remote &quot;origin&quot;]
+	url = https://github.com/grayed/ommnrvp-tmp.git
+	fetch = +refs/heads/*:refs/remotes/origin/*
+[branch &quot;main&quot;]
+	remote = origin
+	merge = refs/heads/main
+[user]
+	name = Vadim Zhukov
+	email = persgray@gmail.com
+<font color="#4E9A06"><b>user@user-RAY-S122-Mi</b></font>:<font color="#3465A4"><b>~/om</b></font>$ git commit
+[main 7cf7d55] add some junk to 121212
+ 1 file changed, 2 insertions(+)
+<font color="#4E9A06"><b>user@user-RAY-S122-Mi</b></font>:<font color="#3465A4"><b>~/om</b></font>$ git config --global user.email &quot;persgray@gmail.com&quot;
+<font color="#4E9A06"><b>user@user-RAY-S122-Mi</b></font>:<font color="#3465A4"><b>~/om</b></font>$ cat ~/.gitconfig
+[color]
+	ui = false
+[user]
+	email = persgray@gmail.com
+<font color="#4E9A06"><b>user@user-RAY-S122-Mi</b></font>:<font color="#3465A4"><b>~/om</b></font>$ vi ~/.gitconfig
+<font color="#4E9A06"><b>user@user-RAY-S122-Mi</b></font>:<font color="#3465A4"><b>~/om</b></font>$ git log
+commit 7cf7d55b78c828d77e71ed6760b0dbcf9457cc1f (HEAD -&gt; main)
+Author: Vadim Zhukov &lt;persgray@gmail.com&gt;
+Date:   Sat Apr 1 13:27:55 2023 +0300
+
+    add some junk to 121212
+
+commit 3768c42e65d65548b120cc5d4344ef62714ff17a (origin/main, origin/HEAD)
+Author: Nikgor2002 &lt;ngniknik@mail.ru&gt;
+Date:   Sat Apr 1 11:33:33 2023 +0300
+
+    Update 123
+
+commit ecf246cddbd0c933b39cc4c3b9074616be3f3687
+Author: Nikgor2002 &lt;90097144+Nikgor2002@users.noreply.github.com&gt;
+Date:   Sat Apr 1 11:33:10 2023 +0300
+
+    Update 121212
+
+commit 2239498aa94b0a4b3adc9be84a995ba24d8bfdf2
+Author: Nikgor2002 &lt;ngniknik@mail.ru&gt;
+Date:   Sat Apr 1 11:32:30 2023 +0300
+
+    Update 121212
+
+commit c8893ca20d4cd6537d12ce054fe8b1842ca342fc
+<font color="#4E9A06"><b>user@user-RAY-S122-Mi</b></font>:<font color="#3465A4"><b>~/om</b></font>$ git push
+Username for &apos;https://github.com&apos;: ^C
+<font color="#4E9A06"><b>user@user-RAY-S122-Mi</b></font>:<font color="#3465A4"><b>~/om</b></font>$ git push
+Username for &apos;https://github.com&apos;: grayed
+Password for &apos;https://grayed@github.com&apos;: 
+remote: Support for password authentication was removed on August 13, 2021.
+remote: Please see https://docs.github.com/en/get-started/getting-started-with-git/about-remote-repositories#cloning-with-https-urls for information on currently recommended modes of authentication.
+fatal: Authentication failed for &apos;https://github.com/grayed/ommnrvp-tmp.git/&apos;
+<font color="#4E9A06"><b>user@user-RAY-S122-Mi</b></font>:<font color="#3465A4"><b>~/om</b></font>$ git push
+Username for &apos;https://github.com&apos;: Username for &apos;https://github.com&apos;: ^C
+Password for &apos;https://Username for &apos;https://github.com&apos;: ^C@github.com&apos;: 
+remote: Support for password authentication was removed on August 13, 2021.
+remote: Please see https://docs.github.com/en/get-started/getting-started-with-git/about-remote-repositories#cloning-with-https-urls for information on currently recommended modes of authentication.
+fatal: Authentication failed for &apos;https://github.com/grayed/ommnrvp-tmp.git/&apos;
+<font color="#4E9A06"><b>user@user-RAY-S122-Mi</b></font>:<font color="#3465A4"><b>~/om</b></font>$ git push
+Username for &apos;https://github.com&apos;: grayed
+Password for &apos;https://grayed@github.com&apos;: 
+remote: Support for password authentication was removed on August 13, 2021.
+remote: Please see https://docs.github.com/en/get-started/getting-started-with-git/about-remote-repositories#cloning-with-https-urls for information on currently recommended modes of authentication.
+fatal: Authentication failed for &apos;https://github.com/grayed/ommnrvp-tmp.git/&apos;
+<font color="#4E9A06"><b>user@user-RAY-S122-Mi</b></font>:<font color="#3465A4"><b>~/om</b></font>$ git push
+Username for &apos;https://github.com&apos;:  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
+Password for &apos;https:// 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@github.com&apos;: 
+remote: Invalid username or password.
+fatal: Authentication failed for &apos;https://github.com/grayed/ommnrvp-tmp.git/&apos;
+<font color="#4E9A06"><b>user@user-RAY-S122-Mi</b></font>:<font color="#3465A4"><b>~/om</b></font>$ git config --global user.email &quot;persgray@gmail.com&quot;^C
+<font color="#4E9A06"><b>user@user-RAY-S122-Mi</b></font>:<font color="#3465A4"><b>~/om</b></font>$ cat ~/.git/config
+cat: /home/user/.git/config: Нет такого файла или каталога
+<font color="#4E9A06"><b>user@user-RAY-S122-Mi</b></font>:<font color="#3465A4"><b>~/om</b></font>$ cat .git/config
+[core]
+	repositoryformatversion = 0
+	filemode = true
+	bare = false
+	logallrefupdates = true
+[remote &quot;origin&quot;]
+	url = https://github.com/grayed/ommnrvp-tmp.git
+	fetch = +refs/heads/*:refs/remotes/origin/*
+[branch &quot;main&quot;]
+	remote = origin
+	merge = refs/heads/main
+[user]
+	name = Vadim Zhukov
+	email = persgray@gmail.com
+<font color="#4E9A06"><b>user@user-RAY-S122-Mi</b></font>:<font color="#3465A4"><b>~/om</b></font>$ vi .git/config 
+<font color="#4E9A06"><b>user@user-RAY-S122-Mi</b></font>:<font color="#3465A4"><b>~/om</b></font>$ git push
+To https://github.com/grayed/ommnrvp-tmp.git
+ <font color="#CC0000">! [rejected]       </font> main -&gt; main (fetch first)
+<font color="#CC0000">error: не удалось отправить некоторые ссылки в «https://grayed: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@github.com/grayed/ommnrvp-tmp.git»</font>
+<font color="#C4A000">подсказка: Обновления были отклонены, так как внешний репозиторий содержит</font>
+<font color="#C4A000">подсказка: изменения, которых у вас нет в вашем локальном репозитории.</font>
+<font color="#C4A000">подсказка: Обычно, это связанно с тем, что кто-то уже отправил изменения в </font>
+<font color="#C4A000">подсказка: то же место. Перед повторной отправкой ваших изменений, вам нужно</font>
+<font color="#C4A000">подсказка: забрать и слить изменения из внешнего репозитория себе</font>
+<font color="#C4A000">подсказка: (например, с помощью «git pull …»).</font>
+<font color="#C4A000">подсказка: Для дополнительной информации, смотрите «Note about fast-forwards»</font>
+<font color="#C4A000">подсказка: в «git push --help».</font>
+<font color="#4E9A06"><b>user@user-RAY-S122-Mi</b></font>:<font color="#3465A4"><b>~/om</b></font>$ git pull
+remote: Enumerating objects: 11, done.
+remote: Counting objects: 100% (11/11), done.
+remote: Compressing objects: 100% (7/7), done.
+remote: Total 9 (delta 5), reused 3 (delta 2), pack-reused 0
+Распаковка объектов: 100% (9/9), 2.79 КиБ | 951.00 КиБ/с, готово.
+Из https://github.com/grayed/ommnrvp-tmp
+   3768c42..b94d77f  main       -&gt; origin/main
+Автослияние 121212
+КОНФЛИКТ (содержимое): Конфликт слияния в 121212
+Не удалось провести автоматическое слияние; исправьте конфликты и сделайте коммит результата.
+<font color="#4E9A06"><b>user@user-RAY-S122-Mi</b></font>:<font color="#3465A4"><b>~/om</b></font>$ vi 121212
+<font color="#4E9A06"><b>user@user-RAY-S122-Mi</b></font>:<font color="#3465A4"><b>~/om</b></font>$ vi 121212
+<font color="#4E9A06"><b>user@user-RAY-S122-Mi</b></font>:<font color="#3465A4"><b>~/om</b></font>$ git add 121212 
+<font color="#4E9A06"><b>user@user-RAY-S122-Mi</b></font>:<font color="#3465A4"><b>~/om</b></font>$ git commit
+[main 2ca45f9] Merge branch &apos;main&apos; of https://github.com/grayed/ommnrvp-tmp into main
+<font color="#4E9A06"><b>user@user-RAY-S122-Mi</b></font>:<font color="#3465A4"><b>~/om</b></font>$ git pull
+Уже обновлено.
+<font color="#4E9A06"><b>user@user-RAY-S122-Mi</b></font>:<font color="#3465A4"><b>~/om</b></font>$ git log
+commit 2ca45f99d4314d9490c92b981aef967f5747ee63 (HEAD -&gt; main)
+Merge: 7cf7d55 b94d77f
+Author: Vadim Zhukov &lt;persgray@gmail.com&gt;
+Date:   Sat Apr 1 13:52:13 2023 +0300
+
+    Merge branch &apos;main&apos; of https://github.com/grayed/ommnrvp-tmp into main
+
+commit b94d77fc4f209b3963197cd3a29fa1b9cd524480 (origin/main, origin/HEAD)
+Author: SionFE &lt;savinov@privacynet.net&gt;
+Date:   Sat Apr 1 13:46:23 2023 +0300
+
+    Test
+
+commit 7cf7d55b78c828d77e71ed6760b0dbcf9457cc1f
+Author: Vadim Zhukov &lt;persgray@gmail.com&gt;
+Date:   Sat Apr 1 13:27:55 2023 +0300
+
+    add some junk to 121212
+
+commit a6d40a40e3da21c3dcbb3e821b83a15187832b04
+Author: Vadim Zhukov &lt;persgray@gmail.com&gt;
+Date:   Sat Apr 1 13:24:03 2023 +0300
+
+    Update log.html
+
+<font color="#4E9A06"><b>user@user-RAY-S122-Mi</b></font>:<font color="#3465A4"><b>~/om</b></font>$ git push
+Перечисление объектов: 10, готово.
+Подсчет объектов: 100% (10/10), готово.
+При сжатии изменений используется до 6 потоков
+Сжатие объектов: 100% (6/6), готово.
+Запись объектов: 100% (6/6), 627 байтов | 627.00 КиБ/с, готово.
+Всего 6 (изменения 4), повторно использовано 0 (изменения 0)
+remote: Resolving deltas: 100% (4/4), completed with 2 local objects.
+To https://github.com/grayed/ommnrvp-tmp.git
+   b94d77f..2ca45f9  main -&gt; main
+<font color="#4E9A06"><b>user@user-RAY-S122-Mi</b></font>:<font color="#3465A4"><b>~/om</b></font>$ vi 121212 
+<font color="#4E9A06"><b>user@user-RAY-S122-Mi</b></font>:<font color="#3465A4"><b>~/om</b></font>$ git add 121212 
+<font color="#4E9A06"><b>user@user-RAY-S122-Mi</b></font>:<font color="#3465A4"><b>~/om</b></font>$ git commit
+[main 8475a80] shrink 121212 a bit
+ 1 file changed, 1 insertion(+), 2 deletions(-)
+<font color="#4E9A06"><b>user@user-RAY-S122-Mi</b></font>:<font color="#3465A4"><b>~/om</b></font>$ git log | head
+commit 8475a80c936123c3e200bfb9a166f4444d169072
+Author: Vadim Zhukov &lt;persgray@gmail.com&gt;
+Date:   Sat Apr 1 13:55:47 2023 +0300
+
+    shrink 121212 a bit
+
+commit 2ca45f99d4314d9490c92b981aef967f5747ee63
+Merge: 7cf7d55 b94d77f
+Author: Vadim Zhukov &lt;persgray@gmail.com&gt;
+Date:   Sat Apr 1 13:52:13 2023 +0300
+<font color="#4E9A06"><b>user@user-RAY-S122-Mi</b></font>:<font color="#3465A4"><b>~/om</b></font>$ git push
+To https://github.com/grayed/ommnrvp-tmp.git
+ <font color="#CC0000">! [rejected]       </font> main -&gt; main (fetch first)
+<font color="#CC0000">error: не удалось отправить некоторые ссылки в «https://grayed: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@github.com/grayed/ommnrvp-tmp.git»</font>
+<font color="#C4A000">подсказка: Обновления были отклонены, так как внешний репозиторий содержит</font>
+<font color="#C4A000">подсказка: изменения, которых у вас нет в вашем локальном репозитории.</font>
+<font color="#C4A000">подсказка: Обычно, это связанно с тем, что кто-то уже отправил изменения в </font>
+<font color="#C4A000">подсказка: то же место. Перед повторной отправкой ваших изменений, вам нужно</font>
+<font color="#C4A000">подсказка: забрать и слить изменения из внешнего репозитория себе</font>
+<font color="#C4A000">подсказка: (например, с помощью «git pull …»).</font>
+<font color="#C4A000">подсказка: Для дополнительной информации, смотрите «Note about fast-forwards»</font>
+<font color="#C4A000">подсказка: в «git push --help».</font>
+<font color="#4E9A06"><b>user@user-RAY-S122-Mi</b></font>:<font color="#3465A4"><b>~/om</b></font>$ git pull
+remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+Распаковка объектов: 100% (3/3), 662 байта | 662.00 КиБ/с, готово.
+Из https://github.com/grayed/ommnrvp-tmp
+   2ca45f9..7a6c19a  main       -&gt; origin/main
+Автослияние 121212
+КОНФЛИКТ (содержимое): Конфликт слияния в 121212
+Не удалось провести автоматическое слияние; исправьте конфликты и сделайте коммит результата.
+<font color="#4E9A06"><b>user@user-RAY-S122-Mi</b></font>:<font color="#3465A4"><b>~/om</b></font>$ vi 121212 
+<font color="#4E9A06"><b>user@user-RAY-S122-Mi</b></font>:<font color="#3465A4"><b>~/om</b></font>$ git add 121212 
+<font color="#4E9A06"><b>user@user-RAY-S122-Mi</b></font>:<font color="#3465A4"><b>~/om</b></font>$ git commit
+[main 2cf74c3] Merge branch &apos;main&apos; of https://github.com/grayed/ommnrvp-tmp into main
+<font color="#4E9A06"><b>user@user-RAY-S122-Mi</b></font>:<font color="#3465A4"><b>~/om</b></font>$ git push
+Перечисление объектов: 10, готово.
+Подсчет объектов: 100% (10/10), готово.
+При сжатии изменений используется до 6 потоков
+Сжатие объектов: 100% (6/6), готово.
+Запись объектов: 100% (6/6), 636 байтов | 636.00 КиБ/с, готово.
+Всего 6 (изменения 4), повторно использовано 0 (изменения 0)
+remote: Resolving deltas: 100% (4/4), completed with 2 local objects.
+To https://github.com/grayed/ommnrvp-tmp.git
+   7a6c19a..2cf74c3  main -&gt; main
+<font color="#4E9A06"><b>user@user-RAY-S122-Mi</b></font>:<font color="#3465A4"><b>~/om</b></font>$ git config branch.main.rebase true 
+<font color="#4E9A06"><b>user@user-RAY-S122-Mi</b></font>:<font color="#3465A4"><b>~/om</b></font>$ git config pull.rebase true 
+<font color="#4E9A06"><b>user@user-RAY-S122-Mi</b></font>:<font color="#3465A4"><b>~/om</b></font>$ cat .git/config
+[core]
+	repositoryformatversion = 0
+	filemode = true
+	bare = false
+	logallrefupdates = true
+[remote &quot;origin&quot;]
+	url = https://grayed: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@github.com/grayed/ommnrvp-tmp.git
+	fetch = +refs/heads/*:refs/remotes/origin/*
+[branch &quot;main&quot;]
+	remote = origin
+	merge = refs/heads/main
+	rebase = true
+[user]
+	name = Vadim Zhukov
+	email = persgray@gmail.com
+[pull]
+	rebase = true
+<font color="#4E9A06"><b>user@user-RAY-S122-Mi</b></font>:<font color="#3465A4"><b>~/om</b></font>$ vi 121212 
+<font color="#4E9A06"><b>user@user-RAY-S122-Mi</b></font>:<font color="#3465A4"><b>~/om</b></font>$ git add 121212 
+<font color="#4E9A06"><b>user@user-RAY-S122-Mi</b></font>:<font color="#3465A4"><b>~/om</b></font>$ git commit 
+[main a5422f0] shrink more
+ 1 file changed, 1 deletion(-)
+<font color="#4E9A06"><b>user@user-RAY-S122-Mi</b></font>:<font color="#3465A4"><b>~/om</b></font>$ git log | head -20
+commit a5422f0b0839bc9a5d11acf682f2638468ce607d
+Author: Vadim Zhukov &lt;persgray@gmail.com&gt;
+Date:   Sat Apr 1 13:58:27 2023 +0300
+
+    shrink more
+
+commit 2cf74c36082c1db0641ee0fa397f4b116551abf5
+Merge: 8475a80 7a6c19a
+Author: Vadim Zhukov &lt;persgray@gmail.com&gt;
+Date:   Sat Apr 1 13:56:45 2023 +0300
+
+    Merge branch &apos;main&apos; of https://github.com/grayed/ommnrvp-tmp into main
+
+commit 8475a80c936123c3e200bfb9a166f4444d169072
+Author: Vadim Zhukov &lt;persgray@gmail.com&gt;
+Date:   Sat Apr 1 13:55:47 2023 +0300
+
+    shrink 121212 a bit
+
+commit 7a6c19a36e1daea6615a2b553f3efe2896cb58b5
+<font color="#4E9A06"><b>user@user-RAY-S122-Mi</b></font>:<font color="#3465A4"><b>~/om</b></font>$ git pull
+remote: Enumerating objects: 5, done.
+remote: Counting objects: 100% (5/5), done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+Распаковка объектов: 100% (3/3), 649 байтов | 649.00 КиБ/с, готово.
+Из https://github.com/grayed/ommnrvp-tmp
+   2cf74c3..d4a7436  main       -&gt; origin/main
+First, rewinding head to replay your work on top of it...
+Применение: shrink more
+Использую индекс для реконструкции базового дерева…
+M	121212
+Откат к применению изменений к базовому коммиту с помощью трехходового слияния…
+Автослияние 121212
+КОНФЛИКТ (содержимое): Конфликт слияния в 121212
+error: Не удалось слить изменения.
+Ошибка применения изменений на 0001 shrink more
+<font color="#C4A000">подсказка: Use &apos;git am --show-current-patch&apos; to see the failed patch</font>
+Resolve all conflicts manually, mark them as resolved with
+&quot;git add/rm &lt;conflicted_files&gt;&quot;, then run &quot;git rebase --continue&quot;.
+You can instead skip this commit: run &quot;git rebase --skip&quot;.
+To abort and get back to the state before &quot;git rebase&quot;, run &quot;git rebase --abort&quot;.
+<font color="#4E9A06"><b>user@user-RAY-S122-Mi</b></font>:<font color="#3465A4"><b>~/om</b></font>$ vi 121212 
+<font color="#4E9A06"><b>user@user-RAY-S122-Mi</b></font>:<font color="#3465A4"><b>~/om</b></font>$ git add 121212 
+<font color="#4E9A06"><b>user@user-RAY-S122-Mi</b></font>:<font color="#3465A4"><b>~/om</b></font>$ git rebase --continue
+Применение: shrink more
+Нет изменений — возможно, вы забыли вызвать «git add»?
+Если ничего не осталось для индексации, то, скорее всего, что-то другое уже сделало те же изменения; возможно, вам следует пропустить этот патч.
+Resolve all conflicts manually, mark them as resolved with
+&quot;git add/rm &lt;conflicted_files&gt;&quot;, then run &quot;git rebase --continue&quot;.
+You can instead skip this commit: run &quot;git rebase --skip&quot;.
+To abort and get back to the state before &quot;git rebase&quot;, run &quot;git rebase --abort&quot;.
+<font color="#4E9A06"><b>user@user-RAY-S122-Mi</b></font>:<font color="#3465A4"><b>~/om</b></font>$ git diff
+<font color="#4E9A06"><b>user@user-RAY-S122-Mi</b></font>:<font color="#3465A4"><b>~/om</b></font>$ git rebase --skip
+<font color="#4E9A06"><b>user@user-RAY-S122-Mi</b></font>:<font color="#3465A4"><b>~/om</b></font>$ git log
+commit d4a743678ac833a2454588ed4aad5a591da4222e (HEAD -&gt; main, origin/main, origin/HEAD)
+Author: Vadim Zhukov &lt;persgray@gmail.com&gt;
+Date:   Sat Apr 1 13:57:01 2023 +0300
+
+    Update 121212
+
+commit 2cf74c36082c1db0641ee0fa397f4b116551abf5
+Merge: 8475a80 7a6c19a
+Author: Vadim Zhukov &lt;persgray@gmail.com&gt;
+Date:   Sat Apr 1 13:56:45 2023 +0300
+
+    Merge branch &apos;main&apos; of https://github.com/grayed/ommnrvp-tmp into main
+
+commit 8475a80c936123c3e200bfb9a166f4444d169072
+Author: Vadim Zhukov &lt;persgray@gmail.com&gt;
+Date:   Sat Apr 1 13:55:47 2023 +0300
+
+    shrink 121212 a bit
+
+commit 7a6c19a36e1daea6615a2b553f3efe2896cb58b5
+Author: Vadim Zhukov &lt;persgray@gmail.com&gt;
+Date:   Sat Apr 1 13:55:23 2023 +0300
+
+    Update 121212
+
+<font color="#4E9A06"><b>user@user-RAY-S122-Mi</b></font>:<font color="#3465A4"><b>~/om</b></font>$ vi 121212 
+<font color="#4E9A06"><b>user@user-RAY-S122-Mi</b></font>:<font color="#3465A4"><b>~/om</b></font>$ git pull
+error: не удалось выполнить получение с перемещением: У вас есть непроиндексированные изменения.
+error: сделайте коммит или спрячьте их.
+<font color="#4E9A06"><b>user@user-RAY-S122-Mi</b></font>:<font color="#3465A4"><b>~/om</b></font>$ git add 121212 
+<font color="#4E9A06"><b>user@user-RAY-S122-Mi</b></font>:<font color="#3465A4"><b>~/om</b></font>$ git commit
+[main 01bf7b6] some junk
+ 1 file changed, 1 insertion(+)
+<font color="#4E9A06"><b>user@user-RAY-S122-Mi</b></font>:<font color="#3465A4"><b>~/om</b></font>$ git add 121212 
+<font color="#4E9A06"><b>user@user-RAY-S122-Mi</b></font>:<font color="#3465A4"><b>~/om</b></font>$ git commit
+На ветке main
+Ваша ветка опережает «origin/main» на 1 коммит.
+  (используйте «git push», чтобы опубликовать ваши локальные коммиты)
+
+нечего коммитить, нет изменений в рабочем каталоге
+<font color="#4E9A06"><b>user@user-RAY-S122-Mi</b></font>:<font color="#3465A4"><b>~/om</b></font>$ git pull
+remote: Enumerating objects: 12, done.
+remote: Counting objects: 100% (6/6), done.
+remote: Compressing objects: 100% (3/3), done.
+remote: Total 12 (delta 3), reused 3 (delta 3), pack-reused 6
+Распаковка объектов: 100% (12/12), 2.09 КиБ | 712.00 КиБ/с, готово.
+Из https://github.com/grayed/ommnrvp-tmp
+   d4a7436..57f21ad  main       -&gt; origin/main
+First, rewinding head to replay your work on top of it...
+Применение: some junk
+Использую индекс для реконструкции базового дерева…
+M	121212
+Откат к применению изменений к базовому коммиту с помощью трехходового слияния…
+Автослияние 121212
+КОНФЛИКТ (содержимое): Конфликт слияния в 121212
+error: Не удалось слить изменения.
+Ошибка применения изменений на 0001 some junk
+<font color="#C4A000">подсказка: Use &apos;git am --show-current-patch&apos; to see the failed patch</font>
+Resolve all conflicts manually, mark them as resolved with
+&quot;git add/rm &lt;conflicted_files&gt;&quot;, then run &quot;git rebase --continue&quot;.
+You can instead skip this commit: run &quot;git rebase --skip&quot;.
+To abort and get back to the state before &quot;git rebase&quot;, run &quot;git rebase --abort&quot;.
+<font color="#4E9A06"><b>user@user-RAY-S122-Mi</b></font>:<font color="#3465A4"><b>~/om</b></font>$ vi 121212 
+<font color="#4E9A06"><b>user@user-RAY-S122-Mi</b></font>:<font color="#3465A4"><b>~/om</b></font>$ git add 121212 
+<font color="#4E9A06"><b>user@user-RAY-S122-Mi</b></font>:<font color="#3465A4"><b>~/om</b></font>$ git rebase --continue
+Применение: some junk
+<font color="#4E9A06"><b>user@user-RAY-S122-Mi</b></font>:<font color="#3465A4"><b>~/om</b></font>$ git log
+commit f450a54af2253b1be7bf1338a95097a262383a49 (HEAD -&gt; main)
+Author: Vadim Zhukov &lt;persgray@gmail.com&gt;
+Date:   Sat Apr 1 14:04:07 2023 +0300
+
+    some junk
+
+commit 57f21add6a4bf8f22f03eafbdcdbb9ee87aed545 (origin/main, origin/HEAD)
+Author: Vadim Zhukov &lt;persgray@gmail.com&gt;
+Date:   Sat Apr 1 14:03:44 2023 +0300
+
+    Update 121212
+
+commit 09f0054d2d4b6ff09b7d54c506002fd7a9597d99
+Merge: 0b6d768 d4a7436
+Author: Dmitry Platonov &lt;didm.platonov@yandex.ru&gt;
+Date:   Sat Apr 1 13:58:32 2023 +0300
+
+    Merge branch &apos;main&apos; of https://github.com/grayed/ommnrvp-tmp
+
+commit 0b6d768a02e760e96a4fff67db54abe4bcd99b81
+Merge: ab3edf0 b94d77f
+Author: Dmitry Platonov &lt;didm.platonov@yandex.ru&gt;
+Date:   Sat Apr 1 13:57:31 2023 +0300
+
+    Merge branch &apos;main&apos; of https://github.com/grayed/ommnrvp-tmp
+<font color="#4E9A06"><b>user@user-RAY-S122-Mi</b></font>:<font color="#3465A4"><b>~/om</b></font>$ git show f450a54af2253b1be7bf1338a95097a262383a49
+commit f450a54af2253b1be7bf1338a95097a262383a49 (HEAD -&gt; main)
+Author: Vadim Zhukov &lt;persgray@gmail.com&gt;
+Date:   Sat Apr 1 14:04:07 2023 +0300
+
+    some junk
+
+diff --git a/121212 b/121212
+index fa788bc..51b945c 100644
+--- a/121212
++++ b/121212
+@@ -9,4 +9,4 @@ Test line 8
+ Test line 9
+ Test line 10
+ Finish line
+-cccc
++qwerty
+<font color="#4E9A06"><b>user@user-RAY-S122-Mi</b></font>:<font color="#3465A4"><b>~/om</b></font>$ git push
+Перечисление объектов: 5, готово.
+Подсчет объектов: 100% (5/5), готово.
+При сжатии изменений используется до 6 потоков
+Сжатие объектов: 100% (3/3), готово.
+Запись объектов: 100% (3/3), 299 байтов | 299.00 КиБ/с, готово.
+Всего 3 (изменения 2), повторно использовано 0 (изменения 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/grayed/ommnrvp-tmp.git
+   57f21ad..f450a54  main -&gt; main
+</pre>  
   </body>
 </html>
