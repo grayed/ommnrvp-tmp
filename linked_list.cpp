@@ -596,5 +596,5 @@ protected:
     _Scary_val _Mycont;
 };
 
-
+// new_comment
 _AXC_END
