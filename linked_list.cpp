@@ -586,9 +586,6 @@ public:
 
     }
 
-    void resize (size_t newSize, const_reference data) {
-
-    }
 
 
 
