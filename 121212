@@ -9,4 +9,10 @@ Test line 8
 Test line 9
 Test line 10
 Finish line
+<<<<<<< HEAD
 ho4u makaroni
+=======
+Anton-Commit 
+qwerty
+ho4u makaroni
+>>>>>>> d628ccc41b67494b93410517c07905af487b8afc
