@@ -46,7 +46,53 @@ config       HEAD         index        logs/        packed-refs
 <font color="#4E9A06"><b>user@user-RAY-S122-Mi</b></font>:<font color="#3465A4"><b>~</b></font>$ ls -l om/.git/refs/remotes/origin/
 итого 4
 -rw-rw-r-- 1 user user 30 апр  1 13:16 HEAD
-</pre>
-    
+<font color="#4E9A06"><b>user@user-RAY-S122-Mi</b></font>:<font color="#3465A4"><b>~</b></font>$ cd om
+<font color="#4E9A06"><b>user@user-RAY-S122-Mi</b></font>:<font color="#3465A4"><b>~/om</b></font>$ echo aaaa bbbb &gt;&gt;121212 
+<font color="#4E9A06"><b>user@user-RAY-S122-Mi</b></font>:<font color="#3465A4"><b>~/om</b></font>$ cat 121212 
+Test line 1
+Test line 2
+Test line 3
+Test line 4
+Test line 5
+Test line 6
+Test line 7
+Test line 8
+Test line 9
+Test line 10
+Finish line
+aaaa bbbb
+<font color="#4E9A06"><b>user@user-RAY-S122-Mi</b></font>:<font color="#3465A4"><b>~/om</b></font>$ git add 121212 
+<font color="#4E9A06"><b>user@user-RAY-S122-Mi</b></font>:<font color="#3465A4"><b>~/om</b></font>$ git status
+На ветке main
+Ваша ветка обновлена в соответствии с «origin/main».
+
+Изменения, которые будут включены в коммит:
+  (используйте «git restore --staged &lt;файл&gt;…», чтобы убрать из индекса)
+	изменено:      121212
+
+<font color="#4E9A06"><b>user@user-RAY-S122-Mi</b></font>:<font color="#3465A4"><b>~/om</b></font>$ echo cccccc  &gt;&gt;121212 
+<font color="#4E9A06"><b>user@user-RAY-S122-Mi</b></font>:<font color="#3465A4"><b>~/om</b></font>$ git status
+На ветке main
+Ваша ветка обновлена в соответствии с «origin/main».
+
+Изменения, которые будут включены в коммит:
+  (используйте «git restore --staged &lt;файл&gt;…», чтобы убрать из индекса)
+	изменено:      121212
+
+Изменения, которые не в индексе для коммита:
+  (используйте «git add &lt;файл&gt;…», чтобы добавить файл в индекс)
+  (используйте «git restore &lt;файл&gt;…», чтобы отменить изменения в рабочем каталоге)
+	изменено:      121212
+
+<font color="#4E9A06"><b>user@user-RAY-S122-Mi</b></font>:<font color="#3465A4"><b>~/om</b></font>$ git add 121212 
+<font color="#4E9A06"><b>user@user-RAY-S122-Mi</b></font>:<font color="#3465A4"><b>~/om</b></font>$ git status
+На ветке main
+Ваша ветка обновлена в соответствии с «origin/main».
+
+Изменения, которые будут включены в коммит:
+  (используйте «git restore --staged &lt;файл&gt;…», чтобы убрать из индекса)
+	изменено:      121212
+
+</pre>    
   </body>
 </html>
