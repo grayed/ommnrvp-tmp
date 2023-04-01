@@ -6,10 +6,10 @@
 
 _AXC_BEGIN
 
-template <class ValTy_>
-struct _List_simple_types : _Simple_types<ValTy_> {
-    using _Node    = _List_node<ValTy_>;
-    using _Nodeptr = _List_node<ValTy_>*;
+template <class value_type>
+struct _List_simple_types : _Simple_types<value_type> {
+    using _Node    = _List_node<value_type>;
+    using _Nodeptr = _List_node<value_type>*;
 };
 
 // add comment 
